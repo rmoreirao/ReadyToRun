@@ -47,9 +47,12 @@
 1) Run the WpfAppUI.exe and click the buttons to load the DLLs and check DLLs loading into the process.
 
 2) DLLs are only loaded when:
-2.1) Referenced Project with a Class being directly loaded: only when class is Loaded
-2.2) Referenced Project with a Class being dynamicaly load: when the DLL is loaded
-2.3) Not-Referenced Project with a Class being dynamicaly load: when the DLL is loaded
+
+	2.1) Referenced Project with a Class being directly loaded: only when class is Loaded
+
+	2.2) Referenced Project with a Class being dynamicaly load: when the DLL is loaded
+
+	2.3) Not-Referenced Project with a Class being dynamicaly load: when the DLL is loaded
 
 ## Ready to Run Commands and Resources
 
