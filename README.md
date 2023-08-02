@@ -1,4 +1,4 @@
-# ReadyToRunCompile
+# ReadyToRun
 
 ## Behavior of Msbuild Publish with ReadyToRun
 
