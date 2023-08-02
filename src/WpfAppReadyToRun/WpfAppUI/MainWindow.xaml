@@ -15,11 +15,13 @@
         </Grid.ColumnDefinitions>
         <Label Grid.Column="3" Content="This is a very simple WPF application to check&#xD;&#xA;loading of DLLs into a Process" HorizontalAlignment="Left" Height="41" Margin="10,25,0,0" VerticalAlignment="Top" Width="263"/>
         <Button x:Name="LoadDll" Grid.Column="3" Content="Click Here to Load the LibD.dll" HorizontalAlignment="Left" Height="40" Margin="8,133,0,0" VerticalAlignment="Top" Width="270" Click="LoadDll_Click"/>
-        <ListBox x:Name="ListProcesses" Grid.Column="3" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="12,217,363,88"/>
-        <Button Grid.Column="3" Content="Refresh" HorizontalAlignment="Left" Height="24" Margin="326,221,0,0" VerticalAlignment="Top" Width="220" Click="Button_Click"/>
-        <TextBox x:Name="FilterProcessText" Grid.Column="3" HorizontalAlignment="Left" Height="30" Margin="367,263,0,0" TextWrapping="Wrap" Text="Lib" VerticalAlignment="Top" Width="180"/>
-        <Label Grid.Column="3" Content="Filter:" HorizontalAlignment="Left" Height="30" Margin="326,263,0,0" VerticalAlignment="Top"/>
-        <Button Grid.Column="3" Content="Call LibA Method" HorizontalAlignment="Left" Height="39" Margin="8,80,0,0" VerticalAlignment="Top" Width="270" Click="Button_Click_1"/>
-        <Label Grid.Column="3" Content="Modules Loaded into Current Process:" HorizontalAlignment="Left" Height="23" Margin="12,189,0,0" VerticalAlignment="Top" Width="266"/>
+        <ListBox x:Name="ListProcesses" Grid.Column="3" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="12,285,363,20"/>
+        <Button Grid.Column="3" Content="Refresh Loaded Modules List" HorizontalAlignment="Left" Height="24" Margin="326,289,0,0" VerticalAlignment="Top" Width="220" Click="Button_Click"/>
+        <TextBox x:Name="FilterProcessText" Grid.Column="3" HorizontalAlignment="Left" Height="19" Margin="425,327,0,0" TextWrapping="Wrap" Text="Lib" VerticalAlignment="Top" Width="121"/>
+        <Label Grid.Column="3" Content="Filter Modules:" HorizontalAlignment="Left" Height="30" Margin="326,322,0,0" VerticalAlignment="Top" Width="94"/>
+        <Button Grid.Column="3" Content="Call LibA Method" HorizontalAlignment="Left" Height="39" Margin="8,80,0,0" VerticalAlignment="Top" Width="300" Click="Button_Click_1"/>
+        <Label Grid.Column="3" Content="Modules Loaded into Current Process:" HorizontalAlignment="Left" Height="23" Margin="12,257,0,0" VerticalAlignment="Top" Width="266"/>
+        <Button x:Name="LoadDll_Copy" Grid.Column="3" Content="Load the LibDNotDepedencyButProjectReference.dll" HorizontalAlignment="Left" Height="40" Margin="8,133,0,0" VerticalAlignment="Top" Width="300" Click="LoadDll_Click"/>
+        <Button x:Name="LoadLibC" Grid.Column="3" Content="Load LibCNotDependency.dll" HorizontalAlignment="Left" Height="45" Margin="10,183,0,0" VerticalAlignment="Top" Width="298" Click="LoadLibC_Click"/>
     </Grid>
 </Window>
