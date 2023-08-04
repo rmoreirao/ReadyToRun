@@ -14,7 +14,7 @@
 | LibAWpfDependsOnThis |    LibBLibADependsOnThis   |   Newtonsoft.Json, Castle.Core |
 | LibBLibADependsOnThis |  |  Newtonsoft.Json, Azure.Core   |
 | LibCNotDependency |  |     |
-| LibDNotDepedencyButProjectReference | Polly |
+| LibDNotDepedencyButProjectReference | | Polly |
 
 ## Project References
 
