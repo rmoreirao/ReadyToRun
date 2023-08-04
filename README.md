@@ -1,10 +1,5 @@
 # ReadyToRun
 
-## Behavior of Msbuild Publish with ReadyToRun
-
-	- When publish a Solution: it will compile and publish all the individual projects in the solution (as explained below)
-	
-	- When publish a Project: it will build all the dependent projects (including nested dependencies), retrieve all the dependencies, and after that it will generate the ReadyToRun DLLs.
 
 ## This Project Source Code
 
@@ -19,6 +14,13 @@
 ## Project References
 
 ![Project References]( ./img/projectreferences.jpg)
+
+## Behavior of Msbuild Publish with ReadyToRun
+
+	- When publish a Solution: it will compile and publish all the individual projects in the solution (as explained below)
+	
+	- When publish a Project: it will build all the dependent projects (including nested dependencies), retrieve all the dependencies, and after that it will generate the ReadyToRun DLLs.
+
 
 ## Test Scenarios:
 
