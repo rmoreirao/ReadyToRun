@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Moq" Version="4.18.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibAWpfDependsOnThis\LibAWpfDependsOnThis.csproj" />
+    <ProjectReference Include="..\LibDNotDepedencyButProjectReference\LibDNotDepedencyButProjectReference.csproj" />
+    <ProjectReference Include="..\LibCNotDependency\LibCNotDependency.csproj" />
+  </ItemGroup>
+</Project>

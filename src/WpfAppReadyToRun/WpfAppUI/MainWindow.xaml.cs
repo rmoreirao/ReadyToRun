@@ -75,17 +75,26 @@ namespace WpfAppUI
 
         private void LoadLibC_Click(object sender, RoutedEventArgs e)
         {
-            Assembly assembly = Assembly.LoadFrom("../../../../LibCNotDependency/bin/Release/net7.0/LibCNotDependency.dll");
-            Type myClassLibD = assembly.GetType("LibCNotDependency.ClassLibC");
-            String message = (String)myClassLibD.InvokeMember(
-                            "GetMessage",
-                            BindingFlags.InvokeMethod | BindingFlags.Public |
-                                BindingFlags.Static,
-                            null,
-                            null,
-                            null);
+            try
+            {
+                Assembly assembly = Assembly.LoadFrom("../../../../LibCNotDependency/bin/Release/net7.0/LibCNotDependency.dll");
+                Type myClassLibD = assembly.GetType("LibCNotDependency.ClassLibC");
+                String message = (String)myClassLibD.InvokeMember(
+                                "GetMessage",
+                                BindingFlags.InvokeMethod | BindingFlags.Public |
+                                    BindingFlags.Static,
+                                null,
+                                null,
+                                null);
 
-            MessageBox.Show(message);
+                MessageBox.Show(message);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }
