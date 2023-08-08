@@ -1,10 +1,5 @@
 # ReadyToRun
 
-## Behavior of Msbuild Publish with ReadyToRun
-
-	- When publish a Solution: it will compile and publish all the individual projects in the solution (as explained below)
-	
-	- When publish a Project: it will build all the dependent projects (including nested dependencies), retrieve all the dependencies, and after that it will generate the ReadyToRun DLLs.
 
 ## This Project Source Code
 
@@ -14,11 +9,18 @@
 | LibAWpfDependsOnThis |    LibBLibADependsOnThis   |   Newtonsoft.Json, Castle.Core |
 | LibBLibADependsOnThis |  |  Newtonsoft.Json, Azure.Core   |
 | LibCNotDependency |  |     |
-| LibDNotDepedencyButProjectReference | Polly |
+| LibDNotDepedencyButProjectReference | | Polly |
 
 ## Project References
 
 ![Project References]( ./img/projectreferences.jpg)
+
+## Behavior of Msbuild Publish with ReadyToRun
+
+	- When publish a Solution: it will compile and publish all the individual projects in the solution (as explained below)
+	
+	- When publish a Project: it will build all the dependent projects (including nested dependencies), retrieve all the dependencies, and after that it will generate the ReadyToRun DLLs.
+
 
 ## Test Scenarios:
 
@@ -45,6 +47,14 @@
 ### Scenario 3: Run the Application to see the behavior of loading the DLLs
 
 1) Run the WpfAppUI.exe and click the buttons to load the DLLs and check DLLs loading into the process.
+
+2) DLLs are only loaded when:
+
+	2.1) Referenced Project with a Class being directly loaded: only when class is Loaded
+
+	2.2) Referenced Project with a Class being dynamicaly load: when the DLL is loaded
+
+	2.3) Not-Referenced Project with a Class being dynamicaly load: when the DLL is loaded
 
 ## Ready to Run Commands and Resources
 
