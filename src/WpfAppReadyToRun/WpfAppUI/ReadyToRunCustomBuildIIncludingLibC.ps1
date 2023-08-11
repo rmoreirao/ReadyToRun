@@ -25,4 +25,4 @@ $xml.Save("$dir\WpfAppUIIncludeLibC.csproj")
 dotnet publish WpfAppUIIncludeLibC.csproj -c Release -r win-x64 -p:PublishReadyToRun=true /p:DebugType=None /p:DebugSymbols=false --no-self-contained /p:PublishReadyToRunShowWarnings=true
 
 # Delete WpfAppUIIncludeLibC.csproj file
-# Remove-Item WpfAppUIIncludeLibC.csproj
+Remove-Item WpfAppUIIncludeLibC.csproj
