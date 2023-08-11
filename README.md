@@ -26,17 +26,17 @@
 
 ### Scenario 1: Publish Solution file
 
-0) Run command to clean up solution: Get-ChildItem .\ -include bin,obj -Recurse | foreach ($_) { remove-item $_.fullname -Force -Recurse }
+0) Run command to clean up solution: ``Get-ChildItem .\ -include bin,obj -Recurse | foreach ($_) { remove-item $_.fullname -Force -Recurse }``
 
-1) Run from src folder: dotnet publish -c Release -r win-x64 -p:PublishReadyToRun=true /p:DebugType=None /p:DebugSymbols=false --no-self-contained /p:PublishReadyToRunShowWarnings=true -v d
+1) Run from src folder: ``dotnet publish -c Release -r win-x64 -p:PublishReadyToRun=true /p:DebugType=None /p:DebugSymbols=false --no-self-contained /p:PublishReadyToRunShowWarnings=true -v d``
 
 2) All projects are published, and the ReadyToRun DLLs are generated for each project.
 
 ### Scenario 2: Publish WpfAppUI project
 
-0) Run command to clean up solution: Get-ChildItem .\ -include bin,obj -Recurse | foreach ($_) { remove-item $_.fullname -Force -Recurse }
+0) Run command to clean up solution: ``Get-ChildItem .\ -include bin,obj -Recurse | foreach ($_) { remove-item $_.fullname -Force -Recurse }``
 
-1) Run from src\WpfAppUI: dotnet publish WpfAppUI.csproj -c Release -r win-x64 -p:PublishReadyToRun=true /p:DebugType=None /p:DebugSymbols=false --no-self-contained /p:PublishReadyToRunShowWarnings=true
+1) Run from src\WpfAppUI: ``dotnet publish WpfAppUI.csproj -c Release -r win-x64 -p:PublishReadyToRun=true /p:DebugType=None /p:DebugSymbols=false --no-self-contained /p:PublishReadyToRunShowWarnings=true``
 
 2) Check that only the WpfAppUI project is published
 
@@ -61,15 +61,15 @@
 
 ### ReadyToRun publish command
 
-dotnet publish -c Release -r win-x64 -p:PublishReadyToRun=true /p:DebugType=None /p:DebugSymbols=false --no-self-contained /p:PublishReadyToRunShowWarnings=true -v d
+``dotnet publish -c Release -r win-x64 -p:PublishReadyToRun=true /p:DebugType=None /p:DebugSymbols=false --no-self-contained /p:PublishReadyToRunShowWarnings=true -v d``
 
 ### To clean the bin folders
 
-Get-ChildItem .\ -include bin,obj -Recurse | foreach ($_) { remove-item $_.fullname -Force -Recurse }
+``Get-ChildItem .\ -include bin,obj -Recurse | foreach ($_) { remove-item $_.fullname -Force -Recurse }``
 
 ### To check the DLLs running for a specific process
 
-tasklist /M /fi "IMAGENAME eq WpfAppUI.exe" /fo list | findstr "Lib"
+``tasklist /M /fi "IMAGENAME eq WpfAppUI.exe" /fo list | findstr "Lib"``
 
 ### Resources:
 	https://learn.microsoft.com/en-us/dotnet/core/deploying/ready-to-run
